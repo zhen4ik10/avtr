@@ -450,15 +450,11 @@ body::after {
 .premier__content > *:last-child {
   margin-bottom: 0
 }
-.premier__content img {
+.premier picture img {
   aspect-ratio: 570/400;
   -o-object-fit: cover;
   object-fit: cover;
-  width: 100%;
-  margin-bottom: 0
-}
-.premier__button:not(:first-child) {
-  margin-top: 1.5625rem
+  width: 100%
 }
 .info-block > * {
   margin-bottom: 1.5625rem
@@ -466,16 +462,12 @@ body::after {
 .info-block > *:last-child {
   margin-bottom: 0
 }
-.info-block img {
+.info-block picture img {
   aspect-ratio: 570/664;
   -o-object-fit: cover;
   object-fit: cover;
   width: 100%;
-  border-radius: var(--border-tl) 0 0 0;
-  margin-bottom: 0
-}
-.info-block__text:not(:first-child) {
-  margin-top: 1.5625rem
+  border-radius: var(--border-tl) 0 0 0
 }
 .video__container img {
   aspect-ratio: 1200/600;
@@ -716,7 +708,7 @@ body::after {
     -moz-column-gap: 3.75rem;
     column-gap: 3.75rem
   }
-  .info-block img {
+  .info-block picture img {
     --border-tl: 18.75rem
   }
   .video__container img {
@@ -778,7 +770,7 @@ body::after {
   }
 }
 @media (max-width:30em) {
-  .info-block img {
+  .info-block picture img {
     --border-tl: 0.0000000625rem
   }
   .video__container img {
@@ -1246,12 +1238,12 @@ body::after {
 }
 @media (min-width:30em) and (max-width:76.875em) {
   @supports (--border-tl:clamp(0.0000000625rem ,-11.9999998975rem + 39.9999998667vw ,18.75rem)) {
-    .info-block img {
+    .info-block picture img {
       --border-tl: clamp( 0.0000000625rem , -11.9999998975rem  +  39.9999998667vw , 18.75rem )
     }
   }
   @supports not (--border-tl:clamp(0.0000000625rem ,-11.9999998975rem + 39.9999998667vw ,18.75rem)) {
-    .info-block img {
+    .info-block picture img {
       --border-tl: calc(0.0000000625rem + 18.7499999375 * (100vw - 30rem) / 46.875)
     }
   }
