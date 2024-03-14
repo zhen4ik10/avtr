@@ -435,7 +435,7 @@ body::after {
   flex-direction: column;
   row-gap: 1.5625rem
 }
-.concept__image {
+.concept picture img {
   aspect-ratio: 870/500;
   -o-object-fit: cover;
   object-fit: cover;
@@ -500,14 +500,13 @@ body::after {
 .interior__title:not(:last-child) {
   margin-bottom: 1.5625rem
 }
-.interior__image {
+.interior__image img {
   aspect-ratio: 900/450;
   -o-object-fit: cover;
   object-fit: cover;
-  width: 100%;
-  margin-bottom: 0
+  width: 100%
 }
-.interior__image--small {
+.interior__image--small img {
   aspect-ratio: 330/205;
   -o-object-fit: cover;
   object-fit: cover;
@@ -671,12 +670,11 @@ body::after {
     flex: 0 1 20.625rem;
     width: 27.5%
   }
-  picture .interior__image--small {
-    flex: 0 1 20.625rem;
-    width: 27.5%
-  }
   .content-block {
-    justify-content: space-between
+    justify-content: space-between;
+    -webkit-column-gap: 1.5625rem;
+    -moz-column-gap: 1.5625rem;
+    column-gap: 1.5625rem
   }
   .content-block__text {
     flex: 0 1 15.9375rem;
@@ -732,14 +730,14 @@ body::after {
   .interior__container {
     margin-bottom: 9.375rem
   }
-  .interior__image--small {
+  .interior__image:not(:last-child) {
+    margin-bottom: 5.875rem
+  }
+  .interior__image--small img {
     --border-tl: 6.5625rem
   }
-  .interior__image--small {
+  .interior__image--small img {
     --border-tr: 6.5625rem
-  }
-  .content-block:not(:first-child) {
-    margin-top: 5.875rem
   }
   .picture img {
     --border-tl: 28.125rem
@@ -786,10 +784,10 @@ body::after {
   .video__container img {
     --border-tl: 0.0000000625rem
   }
-  .interior__image--small {
+  .interior__image--small img {
     --border-tl: 0.0000000625rem
   }
-  .interior__image--small {
+  .interior__image--small img {
     --border-tr: 0.0000000625rem
   }
   .picture img {
@@ -860,8 +858,8 @@ body::after {
   .interior__container {
     margin-bottom: 2.5rem
   }
-  .content-block:not(:first-child) {
-    margin-top: 1.875rem
+  .interior__image:not(:last-child) {
+    margin-bottom: 1.875rem
   }
   .text-content__container {
     -webkit-column-gap: 1.3125rem;
@@ -1116,14 +1114,14 @@ body::after {
       margin-bottom: calc(2.5rem + 6.875 * (100vw - 20rem)/ 56.875)
     }
   }
-  @supports (margin-top:clamp(1.875rem ,0.4684065934rem + 7.032967033vw ,5.875rem)) {
-    .content-block:not(:first-child) {
-      margin-top: clamp(1.875rem ,.4684065934rem + 7.032967033vw ,5.875rem)
+  @supports (margin-bottom:clamp(1.875rem ,0.4684065934rem + 7.032967033vw ,5.875rem)) {
+    .interior__image:not(:last-child) {
+      margin-bottom: clamp(1.875rem ,.4684065934rem + 7.032967033vw ,5.875rem)
     }
   }
-  @supports not (margin-top:clamp(1.875rem ,0.4684065934rem + 7.032967033vw ,5.875rem)) {
-    .content-block:not(:first-child) {
-      margin-top: calc(1.875rem + 4 * (100vw - 20rem)/ 56.875)
+  @supports not (margin-bottom:clamp(1.875rem ,0.4684065934rem + 7.032967033vw ,5.875rem)) {
+    .interior__image:not(:last-child) {
+      margin-bottom: calc(1.875rem + 4 * (100vw - 20rem)/ 56.875)
     }
   }
   @supports ((-moz-column-gap:clamp(1.3125rem ,0.4333791209rem + 4.3956043956vw ,3.8125rem)) or (column-gap:clamp(1.3125rem ,0.4333791209rem + 4.3956043956vw ,3.8125rem))) {
@@ -1268,22 +1266,22 @@ body::after {
     }
   }
   @supports (--border-tl:clamp(0.0000000625rem ,-4.1999998975rem + 13.9999998667vw ,6.5625rem)) {
-    .interior__image--small {
+    .interior__image--small img {
       --border-tl: clamp( 0.0000000625rem , -4.1999998975rem  +  13.9999998667vw , 6.5625rem )
     }
   }
   @supports not (--border-tl:clamp(0.0000000625rem ,-4.1999998975rem + 13.9999998667vw ,6.5625rem)) {
-    .interior__image--small {
+    .interior__image--small img {
       --border-tl: calc(0.0000000625rem + 6.5624999375 * (100vw - 30rem) / 46.875)
     }
   }
   @supports (--border-tr:clamp(0.0000000625rem ,-4.1999998975rem + 13.9999998667vw ,6.5625rem)) {
-    .interior__image--small {
+    .interior__image--small img {
       --border-tr: clamp( 0.0000000625rem , -4.1999998975rem  +  13.9999998667vw , 6.5625rem )
     }
   }
   @supports not (--border-tr:clamp(0.0000000625rem ,-4.1999998975rem + 13.9999998667vw ,6.5625rem)) {
-    .interior__image--small {
+    .interior__image--small img {
       --border-tr: calc(0.0000000625rem + 6.5624999375 * (100vw - 30rem) / 46.875)
     }
   }
